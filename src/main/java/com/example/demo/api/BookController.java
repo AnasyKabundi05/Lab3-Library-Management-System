@@ -32,7 +32,7 @@ public class BookController {
     // POST /libraries/{id}/books
     @PostMapping("/libraries/{id}/books")
     @ResponseStatus(HttpStatus.CREATED)
-    public Book addBookToLibrary(@PathVariable Long id, @Validated @RequestBody Book book) {
+    public Book createBook(@PathVariable Long id, @Validated @RequestBody Book book) {
         return bookService.createBook(id, book);
     }
 

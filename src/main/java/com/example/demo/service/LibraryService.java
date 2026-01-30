@@ -1,21 +1,16 @@
 package com.example.demo.service;
-
 import com.example.demo.domain.Library;
 import com.example.demo.exception.NotFoundException;
 import com.example.demo.repository.BookRepository;
 import com.example.demo.repository.LibraryRepository;
 import jakarta.transaction.Transactional;
 import org.apache.coyote.BadRequestException;
-
 import org.springframework.stereotype.Service;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-
 import java.util.List;
 
 @Service
 public class LibraryService {
+
     private final LibraryRepository libraryRepository;
     private final BookRepository bookRepository;
 

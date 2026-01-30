@@ -1,5 +1,4 @@
 package com.example.demo.api;
-
 import com.example.demo.domain.Library;
 import com.example.demo.service.LibraryService;
 import org.apache.coyote.BadRequestException;
@@ -23,7 +22,7 @@ public class LibraryController {
     }
 
     @GetMapping("/{id}")
-    public Library getLibrary(@PathVariable Long id) {
+    public Library getLibraryById(@PathVariable Long id) {
         return libraryService.getLibraryById(id);
     }
 

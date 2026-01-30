@@ -2,7 +2,6 @@ package com.example.demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import org.apache.tomcat.jni.Library;
 
 @Entity
 public class Book {
@@ -18,13 +17,9 @@ public class Book {
     @JsonBackReference
     private Library library;
 
-    public Book(String title, String author){
+    public Book(){
         this.title = title;
         this.author = author;
-    }
-
-    public Book() {
-
     }
 
 

@@ -1,10 +1,9 @@
 package com.example.demo.domain;
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Entity
 public class Library {
@@ -18,13 +17,9 @@ public class Library {
     @JsonManagedReference
     private List<Book> books = new ArrayList<>();
 
-    public Library(String name, String location) {
+    public Library() {
         this.name = name;
         this.location = location;
-    }
-
-    public Library() {
-
     }
 
     public Long getId() {

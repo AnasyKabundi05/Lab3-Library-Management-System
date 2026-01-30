@@ -8,5 +8,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
         public NotFoundException(String message) {
             super(message);
         }
+
     }
 
