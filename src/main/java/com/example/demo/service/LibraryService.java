@@ -41,6 +41,7 @@ public class LibraryService {
         }
 
         long bookCount = bookRepository.countByLibraryId(id);
+
         if (bookCount > 0) {
             throw new BadRequestException("Cannot delete library " + id + " because it still has " + bookCount + " book(s).");
         }

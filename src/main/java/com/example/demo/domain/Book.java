@@ -18,8 +18,7 @@ public class Book {
     private Library library;
 
     public Book(){
-        this.title = title;
-        this.author = author;
+
     }
 
 

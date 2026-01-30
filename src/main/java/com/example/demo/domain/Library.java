@@ -18,8 +18,7 @@ public class Library {
     private List<Book> books = new ArrayList<>();
 
     public Library() {
-        this.name = name;
-        this.location = location;
+
     }
 
     public Long getId() {
