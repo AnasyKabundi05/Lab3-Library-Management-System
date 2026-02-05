@@ -1,7 +1,8 @@
 package com.example.demo.domain;
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+
 
 @Entity
 public class Book {
@@ -9,8 +10,9 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@NotBlank(message = "Book title must not be empty")
+    @NotBlank(message = "Book title must not be empty")
     private String title;
+
     private String author;
     @ManyToOne(optional = false)
     @JoinColumn(name = "library_id")
